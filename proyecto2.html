@@ -191,7 +191,7 @@
      </p> 
    
       
-    <img src="info_basica.PNG'" width="800" height="200" style="position:center; margin-left:20px;">
+    <img src="info_basica.PNG" width="800" height="200" style="position:center; margin-left:20px;">
     
 
     <p>Veamos ahora los histogramas de cada una de las variables</p>
@@ -294,7 +294,7 @@
       Podemos observar que al retirar los outliers de los datos, vemos figuras muy reconocibles de ciertas distribuciones estadisiticas como la normal, la chi cuadrada e inclusive exponenciales. Otro detalle que podemos resaltar es que los datos en algunas columnas se distribuyen de manera mas simetrica con respecto a la media. Esto no es aun suficiente para concluir acerca de la distribución de las columnas puesto que para esto existen pruebas estadisticas solidas. Empecemos a realizar ciertas pruebas estadisticas para determinar si estas se distribuyen normal univariada. Antes de esto, veamos los cuantiles de cada una y por ultimo los resultados de todas las pruebas. Usaremos para este caso Rstudio:
     </p>
 
-    <img src="cuantiles_sin_outliers.PNG" width="700" height="1000" style="position:center; margin-left:100px;">
+    <img src="cuantiles_sin_outliers.png" width="700" height="1000" style="position:center; margin-left:100px;">
 
     <p>
       Vemos que en comparacióna al qq-plot de los datos en crudo, muchas de las variables se acercan mas a la recta pero sigue sin ser suficiente. Variables Reopen, conectados y PD mejoran mucho pero aun asi, no podemos concluir con certeza la normalidad de estas. Otras variables como FRT y RT no mejoran debido a que la misma distribución de estos datos observada en los histogramas nos da un indicio muy claro de que estas no son de ninguna manera normales. Observemos ahora los resultados de las prueba de normalidad realizadas en Rstudio con los siguientes codigos.
@@ -451,7 +451,7 @@
         Analicemos ahora el indicador CSAT con un diagrama de torta y otros gráficos, realizado en Power BI, para estudiar como se comporta este indicador tanto en los outliers como los datos sin los outliers.
       </p>
 
-      <img src="proyectos/images/pie_csat.PNG" width="600" height="300" style="position:center; margin-left:150px;">
+      <img src="pie_csat.PNG" width="600" height="300" style="position:center; margin-left:150px;">
 
       <ul style="margin-top: 20px; text-align: justify;">
         <li>Vemos que los CSAT de las franjas que poseen outliers en sus columnas poseen calificaciones de todos los tipos mientras que para las franjas que no poseen outliers, los numeros del CSAT se mantienen simétricos con respecto a la media, por lo que podemos afirmar que buenos CSAT no ocurren a menudo.</li>
@@ -501,7 +501,7 @@
   estos CSATs
   </p>
 
-<img src="proyectos/images/PERFIL_CSAT_LESS_3.PNG" width="800" height="400" style="position:center; margin-left:60px;">
+<img src="PERFIL_CSAT_LESS_3.PNG" width="800" height="400" style="position:center; margin-left:60px;">
 <p>Un problema que nos podemos encontrar aqui es que los CSAT  menores que 3 tienen
   ocurren en todos los intervalos del dia, es decir de 12 am a 11:30 am, lo  que seria un poco
   desequilibrado e inclusive sesgado la comparación.  Si compraramos las variables de los CSATS buenos y malos
