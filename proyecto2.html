@@ -1,0 +1,1383 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 ,maximum-scale=1, user-scalablle=no">
+    <!--<link rel="stylesheet" href="css/bootstrap.css">-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <title>Title</title>
+    <style>
+      
+      body {
+          text-align: center; /* Centra el texto dentro del cuerpo */
+          font-family: Arial, sans-serif; /* Utiliza una fuente legible */
+          line-height: 1.6; /* Ajusta el espacio entre líneas */
+          
+          background-image: url('fondo_proyectos.jpg');
+      }
+      .container {
+          margin: 0 auto; /* Centra el contenedor horizontalmente */
+          max-width: 1000px; /* Define el ancho máximo del contenedor */
+          text-align: left; /* Alinea el texto dentro del contenedor a la izquierda */
+          padding: 50px; /* Agrega espacio alrededor del contenido */
+          
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+          margin-top: 20px; /* Espaciado superior para los encabezados */
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: bold;
+      }
+
+      p {
+          margin-bottom: 20px; /* Espaciado inferior para los párrafos */
+          text-align: justify; /*justificar texto */
+          margin-top: 20px;
+      }
+       
+
+      /* Agrega más estilos según sea necesario */
+      
+  </style>
+</head>
+<body>
+    
+    
+    
+
+
+    <!--<background-image src="https://r4.wallpaperflare.com/wallpaper/824/766/324/nebula-4k-teal-turquoise-wallpaper-032b333ddd19ab25df069207c82bc838.jpg" alt="">-->
+
+      <nav class="navbar navbar-expand-lg navbar-light lg-light" >
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="inicio.html">
+            <img src="logodtc1.png" width="60" height="60">   Luis Molina
+        </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active text-white " aria-current="page" href="inicio.html">Home</a>
+                  </li>
+                  <li class="nav-item  active text-white">
+                    <a class="nav-link active text-white " aria-current="page" href="perfil.html">About me</a>
+                  </li>
+                  <li class="nav-item active text-white">
+                    <a class="nav-link active text-white " aria-current="page" href="proyectos.html">Projects</a>
+                  </li class="nav-item active ">
+                  
+                  
+                  <li> 
+                    <a class="navbar-brand text-white" href="https://www.linkedin.com/in/luis-molina-truyot-a517691aa/">
+                        <img src="linkedin-logo-linkedin-icon-transparent-free-png.webp" width="40" height="40"> 
+                    </a>
+                  </li>
+                  
+                </ul>
+              </div>
+        </div>
+</nav>
+
+
+<div class="container" style="background: linear-gradient(rgb(223, 223, 223), rgb(225, 228, 253)) ; margin-top:20px; margin-bottom:20px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; margin-bottom: 30px;">
+
+    
+        <h1>Aplicación de Analisis exploratorio, Patrones y modelamiento: Interacciones diarias entre usuarios y un call center</h1>
+
+        <div style="margin-top:20px ;">
+                
+          <blockquote class="blockquote">
+            <p style="position: center; font-family: 'Times New Roman', Times, serif;">Luis Molina</p>
+          </blockquote>
+         
+        </div>    
+            
+        
+
+        <p >
+          El siguiente dataset corresponde a los registros de un call center , en el que cada fila corresponde a franjas horarias de media hora correspondientes a todos los días de la semana de los meses de enero, febrero y marzo. Cada columna describe diferentes indicadores que se pueden dar en dichas franjas. El objetivo de este conjunto de datos será determinar posibles patrones ó tendencias que nos lleven a entender que factores afectan positiva o negativamente a los indicadores de calidad de servicio y asi brindar una mejor experiencia al usuario. A continuacion daremos detalles de cada una de las variables:
+        </p>
+      
+        
+    
+        <h1>Variables</h1>
+        <ul>
+          <li>Inflow: Interacciones recibidas por cada intervalo. </li>
+          <li>CSAT: Medición de satisfacción del usuario, de 1 a 5, siendo 1 el menor y  5 el máximo.</li>
+          <li>% Reopen: Porcentaje de interacciones re abierto.</li>
+          <li>RT (min): Tiempo total de resolucion de una interacción.</li>
+          <li>FRT (min): Tiempo de respuesta promedio.</li>
+          <li>SLA: Medicion de nivel de servicio.</li>
+          <li>PD: Cantidad de casos cerrados por intervalo.</li>
+          <li>AHT (min): Tiempo medio operativo.</li>
+          <li>Conectados: Cantidad de agentes que gestionaron en dicho intervalo.</li>
+          <li>Cierres: Cantidad de interacciones cerradas.</li>
+          <li>Conexión intervalo (hrs): Conexión total por intervalo.</li>
+        </ul>
+       
+      
+     
+        <img src="Tabla_inicial.jpg" width="800" height="400" style="position:center; margin-left:20px;">
+    
+    
+        
+  <p>Hay dos indicadores que nos miden tanto la satisfacción del usuario (CSAT) y el nivel de servicio (SLA). Además, tenemos ciertas características que nos muestran el comportamiento de los operarios y las  interacciones con los usuarios. 
+  </p>
+    
+    
+
+    
+    <h1>Análisis exploratorio.</h1>
+
+    
+    Empecemos a cargar los datos y empezar a definir variables con nuestras columnas de interes.
+    
+    <div class="container" style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 10px; margin-top: 20px;">
+      <pre style="background-color: #f0f0f0; padding: 5px; border-radius: 5px; overflow-x: auto;">
+          <code style="font-family: 'Courier New', Courier, monospace; font-size: 14px;">
+            
+              import numpy as np
+              import matplotlib.pyplot as plt
+              import pandas as pd
+              import seaborn as sns
+
+
+              df_testBRM=pd.read_excel('Prueba_Tecnica_Data_Scientist.xlsx', sheet_name='Base ')
+              df_testBRM
+              df_copy=df_testBRM.copy()
+              df_variables=df_copy.iloc[:,2:13]
+              df_variables    
+
+      
+          </code>
+      </pre>
+    </div>
+
+
+    <p>Primero, notemos que CSAT va de 1-5 con números decimales, por lo que podríamos segmentarlos en 3 e incluso 4 grupos. Inicialmente lo haremos con 4, pero aun asi podríamos probar ambas e inclusive aplicar clustering a nuestros datos para determinar si existe alguna la correcta segmentación del CSAT de manera categorica, esto con el fin de reconocer ciertos grupos con caracteristicas definidas.
+    </p>
+
+    Definamos la siguiente segmentación:
+
+    <div class="col-10" style="margin-top:30px ;" >
+
+    <li>[1-2) Very low.</li>
+    <li>[2-3) Regular.</li>
+    <li>[3-4) Good.</li>
+    <li>[4-5] Excelent.</li>
+
+  </div>
+  
+  <p>
+
+    Dada la exactitud acerca de la información horaria de las operaciones, podemos empezar a marginar de muchas maneras, por mes, por semana, por días de la semana e inclusive por horas lo cual nos podría dar pista de ciertos patrones o tendencias.
+  </p>
+    
+    
+    
+
+    
+     <p>
+      Ahora observemos la información basica de nuestros datos, usando Python, en la que seleccionamos todas las variables excepto el intervalo y fecha que por ahora no los tendremos en cuenta.
+     </p> 
+   
+      
+    <img src="info_basica.PNG'" width="800" height="200" style="position:center; margin-left:20px;">
+    
+
+    <p>Veamos ahora los histogramas de cada una de las variables</p>
+    
+    <img src="histogramas.PNG" width="800" height="500" style="position:center; margin-left:20px;">
+    
+
+    <p>Podemos notar que tenemos un grupo de variables muy dispersas y otras muy compactas con respecto a la media. Esto puede ser indicio de la presencia de datos atípicos.
+
+      El análisis exploratorio nos arroja datos con outiliers en casi todas las variables, confirmando lo anterior. Aquí podemos observar los diagramas box-plot:
+    </p>
+
+      
+      <img src="boxplot.PNG" width="800" height="500" style="position:center; margin-left:20px;">
+    
+
+    <p>
+      Estas graficas de cuantile, obteanidos mediante la herramienta R, nos ayudan a visualizar mejor la prescencia de outliers.
+    </p>
+
+    
+      <img src="cuantiles.png" width="700" height="1000" style="position:center; margin-left:100px;">
+    
+
+    <p style="margin-top:30px ;" >
+      Analicemos los outliers a ver que podemos encontrar y que medidas podemos tomar con estos datos. Lo primero que haremos es identificar las filas que contienen outilers en alguna de las columnas e identificar alguna clase de patrón en caso de que exista. Para esto utilicemos las siguientee funciones, definida en Python, para realizar la correcta segmentación. 
+    </p>
+
+    <div class="container" style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 10px; margin-top: 20px;">
+      <pre style="background-color: #f0f0f0; padding: 5px; border-radius: 5px; overflow-x: auto;">
+          <code style="font-family: 'Courier New', Courier, monospace; font-size: 14px;">
+                def find_outliers_IQR(df):
+                    q1 = df.quantile(0.25)
+                    q3 = df.quantile(0.75)
+                    IQR = q3 - q1
+                    outliers = df[((df < (q1 - 1.5 * IQR)) | (df > (q3 + 1.5 * IQR)))]
+                    return outliers
+
+                list_columns=list(df_clean.columns)
+                dict_outliers={}
+                for column in list_columns:
+                  dict_outliers[column]=find_outliers_IQR(df_clean[column])
+                
+                # Crear una máscara booleana basada en los índices de df2
+                mascara = df_clean.index.isin(df_outliers.index)
+                df_de_outliers = df_clean[mascara]
+      
+          </code>
+      </pre>
+  </div>
+
+  <p>
+    Obteniendo así, el siguiente resultado.
+  </p>
+    
+    
+  
+
+  <img src="df_outliers.PNG" width="700" height="200" style="position:center; margin-left:100px;">
+  
+  <p>
+    Ahora obtendremos un dataframe sin estos datos.
+
+  </p>
+
+  <div class="container" style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 10px; margin-top: 20px;">
+    <pre style="background-color: #f0f0f0; padding: 5px; border-radius: 5px; overflow-x: auto;">
+        <code style="font-family: 'Courier New', Courier, monospace; font-size: 14px;">
+          # Filtrar las filas de df1 que cumplen con la condición en df2
+          mascara = df_clean.index.isin(df_outliers.index)
+          mascara
+          df_sin_outliers = df_clean[~mascara]
+          
+          df_sin_outliers
+    
+        </code>
+    </pre>
+  </div>
+
+  <p>
+    Este fue el resultado final:
+  </p>
+
+<img src="df_sin_outliers.PNG" width="700" height="200" style="position:center; margin-left:100px;">
+
+
+
+
+
+
+    <p style="margin-top:30px ;" >
+    Anteriormente observamos los histogramas, obtenidos en python, de cada columna de los datos en crudo. Ahora veremos los histogramas del dataframe de los datos sin los outliers a ver si estos tienen un impacto significativo en la distribución de los datos.
+
+    </p>
+
+    <img src="histogramas_sin_outliers.PNG" width="700" height="400" style="position:center; margin-left:100px;">
+
+
+    <p>
+      Podemos observar que al retirar los outliers de los datos, vemos figuras muy reconocibles de ciertas distribuciones estadisiticas como la normal, la chi cuadrada e inclusive exponenciales. Otro detalle que podemos resaltar es que los datos en algunas columnas se distribuyen de manera mas simetrica con respecto a la media. Esto no es aun suficiente para concluir acerca de la distribución de las columnas puesto que para esto existen pruebas estadisticas solidas. Empecemos a realizar ciertas pruebas estadisticas para determinar si estas se distribuyen normal univariada. Antes de esto, veamos los cuantiles de cada una y por ultimo los resultados de todas las pruebas. Usaremos para este caso Rstudio:
+    </p>
+
+    <img src="cuantiles_sin_outliers.PNG" width="700" height="1000" style="position:center; margin-left:100px;">
+
+    <p>
+      Vemos que en comparacióna al qq-plot de los datos en crudo, muchas de las variables se acercan mas a la recta pero sigue sin ser suficiente. Variables Reopen, conectados y PD mejoran mucho pero aun asi, no podemos concluir con certeza la normalidad de estas. Otras variables como FRT y RT no mejoran debido a que la misma distribución de estos datos observada en los histogramas nos da un indicio muy claro de que estas no son de ninguna manera normales. Observemos ahora los resultados de las prueba de normalidad realizadas en Rstudio con los siguientes codigos.
+    </p>
+
+    <div class="container" style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 10px; margin-top: 20px;">
+      <pre style="background-color: #f0f0f0; padding: 5px; border-radius: 5px; overflow-x: auto;">
+          <code style="font-family: 'Courier New', Courier, monospace; font-size: 14px;">
+            ## pruebas de normalidad para los datos con outliers
+
+            shapiro.test(df_with_outliers$Conectados)
+            shapiro.test(df_with_outliers$CSAT)
+            shapiro.test(df_with_outliers$Inflow)
+            shapiro.test(df_with_outliers$"FRT (min)")
+            shapiro.test(df_with_outliers$`% Reopen`)
+            shapiro.test(df_with_outliers$PD)
+            shapiro.test(df_with_outliers$"RT (min)")
+            shapiro.test(df_with_outliers$`% SLA`)
+      
+          </code>
+      </pre>
+  </div>
+
+  <p>Los resultados que se obtuvieron fueron los siguientes.</p>
+
+  <div class="container" style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 10px; margin-top: 20px;">
+    <pre style="background-color: #f0f0f0; padding: 5px; border-radius: 5px; overflow-x: auto;">
+        <code style="font-family: 'Courier New', Courier, monospace; font-size: 14px;">
+          > shapiro.test(df_with_outliers$Conectados)
+
+	        Shapiro-Wilk normality test
+
+            data:  df_with_outliers$Conectados
+            W = 0.95716, p-value < 2.2e-16
+
+            > shapiro.test(df_with_outliers$CSAT)
+
+              Shapiro-Wilk normality test
+
+            data:  df_with_outliers$CSAT
+            W = 0.87186, p-value < 2.2e-16
+
+            > shapiro.test(df_with_outliers$Inflow)
+
+              Shapiro-Wilk normality test
+
+            data:  df_with_outliers$Inflow
+            W = 0.94481, p-value < 2.2e-16
+
+            > shapiro.test(df_with_outliers$"FRT (min)")
+
+              Shapiro-Wilk normality test
+
+            data:  df_with_outliers$"FRT (min)"
+            W = 0.59003, p-value < 2.2e-16
+
+            > shapiro.test(df_with_outliers$`% Reopen`)
+
+              Shapiro-Wilk normality test
+
+            data:  df_with_outliers$`% Reopen`
+            W = 0.88645, p-value < 2.2e-16
+
+            > shapiro.test(df_with_outliers$PD)
+
+              Shapiro-Wilk normality test
+
+            data:  df_with_outliers$PD
+            W = 0.96337, p-value < 2.2e-16
+
+            > shapiro.test(df_with_outliers$"RT (min)")
+
+              Shapiro-Wilk normality test
+
+            data:  df_with_outliers$"RT (min)"
+            W = 0.60087, p-value < 2.2e-16
+
+            > shapiro.test(df_with_outliers$`% SLA`)
+
+              Shapiro-Wilk normality test
+
+            data:  df_with_outliers$`% SLA`
+            W = 0.97627, p-value < 2.2e-16
+    
+        </code>
+    </pre>
+</div>
+
+
+
+  
+
+    <p>
+     Las pruebas de normalidad indican que no se distribuyen las columnas normal univariada. Esto nos muestra una vez mas que no siempre se puede sacar conclusiones con graficas y menos en estos casos. 
+    </p>
+
+
+    
+
+    <p>
+      Sigamos con nuestro analisis exploratorio ¿En que franjas horarias ocurren mas los outliers?
+    </p>
+
+    <div class="container" style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 10px; margin-top: 20px;">
+      <pre style="background-color: #f0f0f0; padding: 5px; border-radius: 5px; overflow-x: auto;">
+          <code style="font-family: 'Courier New', Courier, monospace; font-size: 14px;">
+            
+            dato=pd.DataFrame(df_outliers['Intervalo'].value_counts())
+            plt.figure(figsize=(20, 6))
+            dato['Intervalo'].plot(kind='bar', color='skyblue')
+            plt.title('Histograma de Ocurrencias filas con outlier por hora')
+            plt.xlabel('Hora del Día')
+            plt.ylabel('Número de Ocurrencias')
+            plt.xticks(rotation=45)
+            plt.show()   
+      
+          </code>
+      </pre>
+  </div>
+
+
+
+    <img src="histogramas_ocurrencias_outliers.PNG" width="700" height="400" style="position:center; margin-left:100px; margin-top: 20px;">
+
+    <div class="container" style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 10px; margin-top: 20px;">
+      <pre style="background-color: #f0f0f0; padding: 5px; border-radius: 5px; overflow-x: auto;">
+          <code style="font-family: 'Courier New', Courier, monospace; font-size: 14px;">
+            
+            plt.figure(figsize=(20, 6))
+            datos_sin_outliers['Intervalo'].plot(kind='bar', color='skyblue')
+            plt.title('Histograma de datos no outliers por franja')
+            plt.xlabel('Hora del Día')
+            plt.ylabel('Número de Ocurrencias')
+            plt.xticks(rotation=45)
+            plt.show()   
+      
+          </code>
+      </pre>
+  </div>
+
+    <img src="hitograma_horarios_sin_outliers.png" width="700" height="350" style="position:center; margin-left:100px; margin-top: 20px;">
+    <p style="margin-top:30px ;" >
+      <li>Los horarios donde aparecen los outliers son las horas donde no hay tanto movimiento laboral es decir en horas de la madrugada y en la noche.</li>
+      <li>Los datos que no poseen outliers  en sus columnas ocurren en su gran mayoría en horarios de oficina entre las 10:00am y 7:00pm y de manera parecida a los outliers de 7:30pm a 8pm</li>
+      <li>Estos patrones pueden ser importantes a la hora de realizar afirmaciones acerca del comportamiento del servicio y de los indicadores. Puede ser que la hora del dia sea un factor exogeno muy importante en los resultados</li>
+    </p>
+
+
+
+
+
+
+      <p>
+        Analicemos ahora el indicador CSAT con un diagrama de torta y otros gráficos, realizado en Power BI, para estudiar como se comporta este indicador tanto en los outliers como los datos sin los outliers.
+      </p>
+
+      <img src="proyectos/images/pie_csat.PNG" width="600" height="300" style="position:center; margin-left:150px;">
+
+      <ul style="margin-top: 20px; text-align: justify;">
+        <li>Vemos que los CSAT de las franjas que poseen outliers en sus columnas poseen calificaciones de todos los tipos mientras que para las franjas que no poseen outliers, los numeros del CSAT se mantienen simétricos con respecto a la media, por lo que podemos afirmar que buenos CSAT no ocurren a menudo.</li>
+        <li>Hay 145 instancias con CSAT entre regulares y buenas sin outliers en alguna de sus columnas pero no sobre pasa el 3.3, esto se puede apreciar en los histogramas presentados anteriormente.</li>
+        <li>Regular es el grupo de CSAT mas presente en ambos datasets, pero en los datasets sin outliers es el grupo mas presente con diferencia a los demás, en cambio en los datos con outliers hay mas diversidad. Esto es normal, dado que que la distribución del CSAT en los datos sin outliers esta centrada a la media</li>
+      </ul>
+    
+    
+    <p>
+      Veamos ahora como se comportan las variables en las distintos intervalos. Se decidió al final solo marginar con las horas del dia puesto que nos pueden
+    brindar mas información acerca del comportamiento de todas las variables de este dataset.
+    </p>
+    <img src="features_per_interval.PNG" width="800" height="400" style="position:center; margin-left:60px;">
+
+
+
+<p>Si observamos los conectados, podemos ver que entre las 12 am y las 10am en promedio no hay muchos conectados lo cual es normal si observamos que el inflow tambien a esas horas no es muy alto, y esto se debe a que entre esas horas, la población civil está dormida, no es una hora muy común para recibir interacciones, en general, el flujo de interacciones disminuye dependiendo de la hora.
+  Otra cosa que pondemos observar es que el FRT y RT que corresponden al tiempo de respuesta y resolución total de una interacción aumenta
+  en este intervalo puesto que a estas horas no hay muchos conectados lo que hace que las respuestas tarden en llegar. Vemos que estas dos
+  variables disminuyen muchisimo entre las 10 am y 8 pm y esto se debe a que hay muchisimos mas conectados a estas horas, y estas horas
+  es donde precisamentre hay mas demanda. Podemos ver el promedio de la conexión por intervalo disminuye en horas de la madrugada y esto se debe a que no hay muchas interacciones.
+  
+  
+  En variables como el %SLA y el CSAT los cuales son indicadores del nivel 
+  de servicio se comportan de manera mas inestable( presencia de picos)
+  en hoas de la madrugada. Concentrandonos en CSAT ya que el SLA no varia mucho. Vemos que en promedio entre 
+  la 1am y 6:30 am el promedio del CSAT está por encima de la media, inclusive en algunas horas encima de 3.
+  esto se puede deber a que en estos intervalos hubo CSAT bastante bueno. Corroboremos esto haciendo
+  un Grafico del maximo CSAT en la franja horaria correspondiente. Veamos si el maximo en cada intervalo
+  es muy lejano o no a la media.</p>
+
+<img src="INFO_CSAT_GRANDE.PNG" width="800" height="400" style="position:center; margin-left:60px;">
+<p>El gráfico anterior evidencia que entre la 12am y las 10 am empiezan a aparecer CSAT por encima del
+  3, En total son 428 datos los que corresponden a CSAT mayores a 3, ¿Cuantos son
+  mayores que 4 ? 100 datos y esos datos en su mayoria ocurren entre la 1am y 9am, es decir, muy temprano,
+  la  jornada laboral apenas está empezado y la cantidad de interacciones son muy bajas.
+  
+  Podemos observar tambien que siempre hay una cantidad significativa de valores mayores que 3 e incluso
+  mayores que 4, por lo que la media del CSAT entre la 1-6:30 am se ve realmente alterada y por eso se ven e
+  esos picos en esa zona horaria.
+  
+  Una pregunta que nos podría surgir seria el por qué de estos CSAT tan grandes, que factores pudieron depronton
+  ayudarnos a tener tan buenos CSATs.
+  
+  
+  En principio podemos observar el comportamiento y describirlo pero comotal no nos brinda mucho leer esta información sin antes contrastarla con un caso contrario y concreto el cual es cuando los CSATs son menores que 3. veamos ahora como se comportan las variables para 
+  estos CSATs
+  </p>
+
+<img src="proyectos/images/PERFIL_CSAT_LESS_3.PNG" width="800" height="400" style="position:center; margin-left:60px;">
+<p>Un problema que nos podemos encontrar aqui es que los CSAT  menores que 3 tienen
+  ocurren en todos los intervalos del dia, es decir de 12 am a 11:30 am, lo  que seria un poco
+  desequilibrado e inclusive sesgado la comparación.  Si compraramos las variables de los CSATS buenos y malos
+  vemos que entre las 12am y 9am, se comportan muy parecido, por lo que no hay un patrón claro del porqué
+  los usuarios califican mas que 4 o menor que 3. Veamos ahora entre 3 y 4 y comparemos con los CSATs malos 
+  en todas las franjas horarias. 
+  </p>
+
+<img src="PERFIL_CSAT_LESS_3_12_9.PNG" width="800" height="400" style="position:center; margin-left:60px;">
+
+<p>
+  Comparando ambos conjuntos de datos, vemos que el comportamiento de las variables es muy similar y debido
+  al desbalance de datos se ven patrones mas irregulares entre 3-4 y menores que 3. Estos graficos
+  reflejan la poca correlación que hay entre CSAT y las demás variables asi que no podemos sacar conclusiones
+  claras del por qué los usuarios califican bien el servicio, aunque queda la incognita de por qué lo gran mayoria de 
+  CSAT mayores que 4 suceden temprano y no en horario laboral.
+  
+</p>
+
+
+
+
+
+
+<h1> Aprendizaje Estadístico.</h1>
+<p>
+  Esta sección se buscará implementar un modelo que sea capaz de predecir el CSAT. Para esto lo primero que haremos es analizar si todas las variables
+son necesarias o si podremos implementar modelos con un numéro reducido de variables. Un primer analisis incial podría ser observar la matriz de correlación entre las variables
+
+</p>
+
+<img src="corr_todos_los_datos.png" width="600" height="600" style="position:center; margin-left:100px;">
+
+<p>
+  Con el siguiente codigo en Python, tendremos una lista clara de las correlaciones mas altas.
+</p>
+
+
+
+
+<div class="container" style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 10px; margin-top: 20px;">
+  <pre style="background-color: #f0f0f0; padding: 5px; border-radius: 5px; overflow-x: auto;">
+      <code style="font-family: 'Courier New', Courier, monospace; font-size: 14px;">
+        
+        def get_redundant_pairs(df):
+    '''Get diagonal and lower triangular pairs of correlation matrix'''
+    pairs_to_drop = set()
+    cols = df.columns
+    for i in range(0, df.shape[1]):
+        for j in range(0, i+1):
+            pairs_to_drop.add((cols[i], cols[j]))
+    return pairs_to_drop
+
+def get_top_abs_correlations(df, n=5):
+    au_corr = df.corr().abs().unstack()
+    labels_to_drop = get_redundant_pairs(df)
+    au_corr = au_corr.drop(labels=labels_to_drop).sort_values(ascending=False)
+    return au_corr[0:n]
+
+print("Top Absolute Correlations")
+print(get_top_abs_correlations(df_variables, 20))
+              
+      </code>
+  </pre>
+</div>
+
+<p>
+  Obteniendo así, el siguiente resultado
+</p>
+  
+<table class="table table hover">
+  <thead>
+    <tr>
+      <th>Variable 1</th>
+    <th>Variable 2</th>
+    <th>Correlación</th>
+    </tr>
+    
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        FRT (min) 
+  
+      </td>
+      <td>
+        RT (min) 
+      </td>
+      <td>
+        0.988068
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+      Conectados    
+      </td>
+      <td>
+        Conexión Intervalo (hrs) 
+      </td>
+      <td>
+        0.984413
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Inflow                         
+      </td>
+      <td>
+        Cierres
+      </td>
+      <td>
+        0.920547
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Conectados                       
+  
+      </td>
+      <td>
+        Cierres
+      </td>
+      <td>
+        0.910565
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Inflow         
+  
+      </td>
+      <td>
+        Conexión Intervalo (hrs) 
+      </td>
+      <td>
+        0.900134
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Conectados                     
+  
+      </td>
+      <td>
+        Inflow   
+      </td>
+      <td>
+        0.877997
+      </td>
+    </tr>
+    <tr>
+      <td>
+        RT (min)                              
+  
+      </td>
+      <td>
+        PD 
+      </td>
+      <td>
+        0.396504
+      </td>
+    </tr>
+    <tr>
+      <td>
+        RT (min)        
+  
+      </td>
+      <td>
+        Conexión Intervalo (hrs)
+      </td>
+      <td>
+        0.368536
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Conectados                   
+  
+      </td>
+      <td>
+        RT (min) 
+      </td>
+      <td>
+        0.362679 
+      </td>
+    </tr>
+    <tr>
+      <td>
+        RT (min)     
+  
+      </td>
+      <td>
+        Conexión Intervalo (hrs)
+      </td>
+      <td>
+        0.361806
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+
+<p>
+  Podemos ver que existen muchas correlaciones altas por encima de 0.7 y a pesar de que obtivimos las primeras 20 correlaciones, CSAT no aparece, y es que solo se correlaciones debilmente con el SLA el cual es un indicador de calidad y el inflow aunque su correlación es negativa. Si tomamos como unico criterio la correlación nos quedariamos con las siguientes variables predictoras:
+</p>
+
+
+<li>
+  FRT
+</li>
+<li>
+  Conectados
+</li>
+ 
+<li>
+  SLA
+</li>
+  
+<li>
+  Cierres
+</li>
+  
+<li>
+  Re open
+</li>
+
+<li>
+  PD
+</li>
+
+<li>
+  AHT
+</li>
+
+<h2>Análisis de Cluster: Dendograma</h2>
+<p>
+  Ahora, nos apoyaremos en R que contiene para tenerminar un clustering de variables el cual se basa en la correlación entre los predictores. La idea es ver que variables pueden ser similares y asi podemos elegir p variables y no el total.
+</p>
+     <div class="container" style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 10px; margin-top: 20px;">
+      <pre style="background-color: #f0f0f0; padding: 5px; border-radius: 5px; overflow-x: auto;">
+          <code style="font-family: 'Courier New', Courier, monospace; font-size: 14px;">
+            
+            library(ClustOfVar)
+            library(factoextra)
+            library(FactoClass)
+            library(stats)
+            # Métodos para agrupación de variables
+
+            # Usando matrices de similaridad
+
+            # Usando el paquete ClustOfVar 
+            df_with_outliers<- read_excel("C:/Users/luis/Desktop/PORTFOLIO/projects/BRM/df_clean.xlsx")
+            colnames(df_with_outliers)
+
+            mbase<-df_with_hours[,c("Conectados","Inflow","% Reopen","FRT (min)","AHT (min)","RT (min)","% SLA","Cierres","Conexión Intervalo (hrs)","PD","Intervalo_labeled")]
+            mbase<-as.matrix(mbase)
+
+            summary(mbase)
+
+            aux2 <- hclustvar(mbase)
+            plot(aux2)
+            rect.hclust(aux2, k=2, border=10:15) 
+
+            # Usando la matriz de correlaciones
+            # La medida de distancia es 1-corr^2.
+
+            m_corr <- cor(mbase)
+            mat_dist <- as.dist(1-m_corr^2)
+            hc5 <- ward.cluster(mat_dist, h.clust=1)
+            plot(hc5, ylab="Distancias", xlab="Variables")
+            rect.hclust(hc5, k=2, border="red")   
+                  
+          </code>
+      </pre>
+  </div>
+  <p style="margin-top:30px ;" >
+    Los resultados obtenidos por este codigo son los siguientes:
+  </p>
+    <img src="dendograma_clustervar.png" width="400" height="500" style="position:center; margin-left:250px;">
+
+  <p>
+    Estos resultados corresponden a los datos completos con los outliers. El analisis de este dendograma se hará mirando la matriz de correlación de estos datos. Podemos observar grupos entre conectados y conexión intervalo, inflow cierres, reopen-aht, frt-rt y sla PD.
+  </p>
+    
+<p>
+  Si observamos la matriz de correlación podemos observar los siguiente:
+  
+  <li>
+    Precisamente estos grupos de variables tienen una alta correlación entre cada uno. Por ejemplo conectados y conexión intervalo poseen una correlación altisima además de que basandonos en la definición de cada una de estas dos variables nos daremos cuenta que es normal que estas se correlacionen tanto ya que a mas conectados el tiempo de conexión por intervalo es mas alto. 
+  </li>
+  <li>
+    En cierres e inflow pasa exactamente lo mismo con conectados y conexión intervalo puesto que el inflow es la cantidad de interacciónes por intervalo y los cierres representan la cantidad de interacciones cerradas por intervalo, por lo que es claro que si no hay interacciones no hay nada que cerrar. 
+  </li>
+  <li>
+    Para el RT y AHT la corrrelación ya no es tan alta, pero basicamente AHT representa el tiempo operativo y reopen la cantidad de interacciones re abierta, algo que es probable que no siempre suceda, esto podría explicar la correlación aunque existente es baja. FRT Y RT se correlacionan fuertmente; FRT es el tiempo de respuesta promedio y RT el tiempo total de resolución, por lo que una variable es el promedio de la otra. 
+  </li>
+  <li>
+    El SLA y el PD donde el SLA es la medicion del nivel de servicio y el PD representa la cantidad de casos cerrados por intervalo. En este caso, el PD y el SLA tienen una correlación negativa y si analizamos lo que representan cada una de estas variables no se ve con claridad la razón por la cual ambas variables se correlacionan negativamente.
+  </li>
+  Despues de hacer este analisis, podriamos elegir variables con el fin de reducir el numero de predictores para proximos modelos e incluso ganar interpretabilidad. Las variables escogidas bajo el criterio del clustering de variables son  
+</p>
+
+  <li>
+    Conectados
+  </li>
+  <li>
+    inflow
+  </li>
+  
+  <li>
+    AHT
+  </li>
+  
+  <li>
+    RT
+  </li>
+ 
+  <li>
+    PD
+  </li>
+  <li>
+    Re open
+  </li>
+  <li>
+    SLA
+  </li>
+
+
+  <p>   
+  En comparación con nuestra elección vemos que salieron conjuntos de datos muy similares. Otra tecnica para seleccionar variables puede ser Filter Methods. Estos métodos seleccionan rasgos basados en características generales de los datos medidos independientemente de un algoritmo de aprendizaje. 
+  </p>
+
+  <h2>Selección de características:</h2>
+  
+  <p>
+    Conviene recordar que muchas pruebas estadísticas habituales sólo tienen en cuenta el efecto de una característica cada vez, independientemente de su relación multivariante con otras características. Esto constituye en sí mismo una deficiencia importante de estas pruebas, ya que en muchas situaciones las características trabajan colectivamente para dar lugar a un valor objetivo observado.
+  </p>
+  
+  <p>
+  No obstante, en lo que respecta a las pruebas estadísticas, se puede demostrar que cuando tenemos muchas características y, por tanto, muchas pruebas estadísticas para examinar la importancia de cada característica a la vez, la probabilidad de tener al menos un falso positivo entre todas las pruebas, también conocida como tasa de error por familia (FWER), es superior a donde está el nivel de significación de cada prueba. Un método sencillo para controlar la FWER es la conocida corrección de Bonferroni. 
+  </p>
+ 
+
+<div class="container" style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 10px; margin-top: 20px;">
+  <pre style="background-color: #f0f0f0; padding: 5px; border-radius: 5px; overflow-x: auto;">
+      <code style="font-family: 'Courier New', Courier, monospace; font-size: 14px;">
+        
+        from sklearn.feature_selection import SelectFdr, f_classif, SelectKBest,f_regression
+        import numpy as np
+        import pandas as pd
+        from sklearn.model_selection import train_test_split
+        from sklearn.impute import SimpleImputer # to impute
+        from sklearn.preprocessing import StandardScaler # to scale
+
+        df_fea_filter=df_clean.drop(['Intervalo'],axis=1)
+
+
+        y = df_fea_filter['CSAT ']
+        X = df_fea_filter.drop('CSAT ', axis=1)
+        X_train, X_test, y_train, y_test = train_test_split(X, y)
+        scaler = StandardScaler().fit(X_train)
+        X_train = scaler.transform(X_train)
+        X_test = scaler.transform(X_test)
+        anova_res = f_regression(X_train, y_train)
+        pvalues = anova_res[1]
+        alpha=0.01
+             
+      </code>
+  </pre>
+</div>
+<p>
+  <p>
+    La selección de características mediante pruebas estadísticas se implementa mediante diferentes clases en el módulo sklearn.feature_selection. Por ejemplo, para comprobar la importancia del estadístico F calculado como parte de ANOVA en la clasificación, podemos utilizar la función f_classif. La prueba F para comprobar la significación del estadístico F calculado a partir del coeficiente de correlación de Pearson en regresión se implementa en la función f_regression.
+  </p>
+
+  <p>
+    El mencionado filtro de selección de características basado en el procedimiento Benjamini-Hochberg para la corrección "fdr" se implementa mediante la clase SelectFdr. Los filtros basados en otras correcciones como "fpr" (tasa de falsos positivos) o FWER se implementan utilizando SelectFpr y SelectFwe, respectivamente. A continuación presentamos algunos ejemplos para aclarar mejor la utilidad de estas clases.
+  </p>
+  
+  <p>
+    Por defecto, SelectFdr, SelectFpr y SelectFwe utilizan la prueba ANOVA para la clasificación (es decir, f_classif), pero esto podría cambiarse para que estas correcciones puedan utilizarse con otras pruebas estadísticas para problemas de clasificación o regresión. Por ejemplo, para utilizar la prueba F para la regresión, podemos utilizar SelectFdr(score_func=f_regression). Para especificar explícitamente un número de características a elegir, se puede utilizar la clase SelectKBest. También podemos utilizar SelectPercentile para mantener un porcentaje de características. Una vez más, por defecto, estas clases utilizan f_classif, que implementa ANOVA, y que podría ser cambiado en función de las pruebas necesarias.
+  </p>
+</p>
+
+<div class="container" style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 10px; margin-top: 20px;">
+  <pre style="background-color: #f0f0f0; padding: 5px; border-radius: 5px; overflow-x: auto;">
+      <code style="font-family: 'Courier New', Courier, monospace; font-size: 14px;">
+        
+        print("The number of important features based on F statistic (no,!multiple hypothesis correction):", sum(anova_res[1]< alpha))
+        pvalues_taken_before_BH = pvalues[pvalues  alpha]
+      print("The maximum p-value considered significant before BH correction,!is: {:.4f}".format(pvalues_taken_before_BH.max()))
+      # to implement BH procedure for the P-values obtained from ANOVA
+      pvalues_sorted = np.sort(anova_res[1])
+      pvalues_taken_using_BH = pvalues_sorted[pvalues_sorted <= np.arange(1,X_train.shape[1]+1)*alpha/X_train.shape[1]]
+      print("The number of important features based on F statistic (after,!multiple hypothesis correction):", len(pvalues_taken_using_BH))
+      print("The maximum p-value considered significant after BH correction,!is: : {:.4f}".format(pvalues_taken_using_BH.max()))
+      # to use SelectFdr to use both the BH procedure and filter features
+      filter_fdr = SelectFdr(score_func=f_regression,alpha=0.01).fit(X_train, y_train) # filter_fdr,!is a transformer using which we can transform the data
+      print("Let's look at the p-values for the first 10 features\n", filter_fdr.pvalues_[0:10]) # using pvalues_ attributes to access p values
+      X_train_filtered_BH = filter_fdr.transform(X_train) #X_train_filtered_BH is our filtered data based on ANOVA and fdr correction
+      print("The number of important features based on F statistic (after multiple hypothesis correction):", X_train_filtered_BH.shape[1])
+      X_test_filtered_BH = filter_fdr.transform(X_test)
+      print("The shape of test data (the number of features should match with training): ", X_test_filtered_BH.shape)
+      # to use SelectKBest
+      filter_KBest = SelectKBest(k='all').fit(X_train, y_train)
+      X_train_filtered_KBest = filter_KBest.transform(X_train)
+      print("The number of important features based on F statistic (using best individual feature):", X_train_filtered_KBest.shape[1])
+      X_test_filtered_KBest = filter_KBest.transform(X_test)
+      print("The shape of test data (the number of features should match with training): ", X_test_filtered_KBest.shape)
+             
+      </code>
+  </pre>
+</div>
+
+Los resultados obtenido con estas tecnicas son:
+<div class="container" style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 10px; margin-top: 20px;">
+  <pre style="background-color: #f0f0f0; padding: 5px; border-radius: 5px; overflow-x: auto;">
+      <code style="font-family: 'Courier New', Courier, monospace; font-size: 14px;">
+        
+        The number of important features based on F statistic (no,!multiple hypothesis correction): 9
+        The maximum p-value considered significant before BH correction,!is: 0.0013
+        The number of important features based on F statistic (after,!multiple hypothesis correction): 9
+        The maximum p-value considered significant after BH correction,!is: : 0.0013
+        Let's look at the p-values for the first 10 features
+         [2.15199094e-14 2.39340204e-27 1.17187561e-01 7.01525380e-09
+         1.33111585e-03 1.53571605e-08 1.79358788e-23 3.57956968e-23
+         7.65163486e-14 9.26625832e-12]
+        The number of important features based on F statistic (after multiple hypothesis correction): 9
+        The shape of test data (the number of features should match with training):  (898, 9)
+        The number of important features based on F statistic (using best individual feature): 10
+        The shape of test data (the number of features should match with training):  (898, 10)
+             
+      </code>
+  </pre>
+</div>
+<p>
+  Vemos que los resultados obtenidos fueron 9 y 10 variables en todas pruebas realizadas, tanto el procedimiento de manera manual como usando fdr y Kbest. Estos resultados contradicen la conclusión del cluster de variables. Seguimos teniendo dos conjuntos uno con 7 y otro con 10
+</p>
+
+<h3>Importancia de Variables: Embeded Methods</h3>
+<p>
+  <p>
+    Otro metodo que podemos usar para encontrar variables importantes es realizar Embeded methods. Se trata de algoritmos que, una vez construido el modelo predictivo, permiten utilizar la estructura del modelo para la selección de características. En otras palabras, la etapa de selección de características está integrada en el entrenamiento del modelo.
+  </p>
+
+  <p>
+    En este sentido, una vez entrenado el modelo, la importancia de las características se juzga por las propiedades de los aprendices. Por ejemplo, las magnitudes de los coeficientes en un modelo lineal entrenado con datos normalizados podrían considerarse como la influencia de sus características correspondientes en la variable objetivo. Ahora bien, si en el mismo escenario el coeficiente de una característica es cero, significa que no hay influencia de esa característica sobre la variable objetivo en los datos dados. Existen dos tipos de métodos 1) no iterativos y 2) iterativos.
+  </p>
+  
+  <p>
+    Una métrica común para medir la importancia en los bosques aleatorios es la Impureza de Disminución Media (MDI) (Louppe et al., 2013). La MDI para una característica k se define como la suma normalizada de las caídas de impureza a través de todos los nodos y todos los árboles que utilizan fk para dividir los nodos. Usaremos random forest para determinar la importancia de nuestras variables
+  </p>
+</p>
+
+
+<div class="container" style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 10px; margin-top: 20px;">
+  <pre style="background-color: #f0f0f0; padding: 5px; border-radius: 5px; overflow-x: auto;">
+      <code style="font-family: 'Courier New', Courier, monospace; font-size: 14px;">
+        
+        from sklearn.ensemble import RandomForestRegressor
+        from sklearn.datasets import make_regression
+        df_fea_random_forest=df_clean.drop(['Intervalo'],axis=1)
+
+
+        y = df_fea_filter['CSAT ']
+        X = df_fea_filter.drop('CSAT ', axis=1)
+        X_train, X_test, y_train, y_test = train_test_split(X, y)
+        scaler = StandardScaler().fit(X_train)
+        X_train = scaler.transform(X_train)
+        X_test = scaler.transform(X_test)
+        regr = RandomForestRegressor(max_depth=28, 
+                            random_state=0,
+                            min_samples_split=2,
+                            min_samples_leaf=1,
+                            max_features="sqrt",
+                            max_leaf_nodes=1000,
+                            ccp_alpha=0.0000000001,
+                            max_samples=2694)
+        regr.fit(X_train, y_train)
+
+        global_importances = pd.Series(regr.feature_importances_, index=X.columns)
+        global_importances.sort_values(ascending=True, inplace=True)
+        global_importances.plot.barh(color='green')
+        plt.xlabel("Importance")
+        plt.ylabel("Feature")
+        plt.title("Global Feature Importance - Built-in Method")
+             
+      </code>
+  </pre>
+</div>
+
+<img src="global_feature_importance.png" width="600" height="300" style="position:center; margin-left:100px;">
+
+<p>
+  <p>
+    Según este método, se aprecia que la importancia de las variables es muy equilibrada. La mas importante de todas según este método es el inflow. No hay un único método que sea el mejor, todos ellos son sólo estimaciones basadas en diferentes supuestos.
+  </p>
+<p>
+  Una desventaja de este método es que no proporciona ninguna información sobre la dirección de la relación entre la característica y el objetivo. Una forma sencilla de hacer que este método sea más sólido es añadir una característica aleatoria al conjunto de datos y ver si obtiene una puntuación de importancia alta.
+</p>  
+<p>
+  La característica aleatoria sirve de referencia para comparar la importancia de las características reales. Si una característica real tiene una importancia menor que la característica aleatoria, podría indicar que su importancia se debe simplemente al azar.
+</p>
+Para utilizar este método, basta con añadir una columna aleatoria al conjunto de datos y volver a entrenar el modelo.
+</p>
+
+<div class="container" style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 10px; margin-top: 20px;">
+  <pre style="background-color: #f0f0f0; padding: 5px; border-radius: 5px; overflow-x: auto;">
+      <code style="font-family: 'Courier New', Courier, monospace; font-size: 14px;">
+        
+        from sklearn.ensemble import RandomForestRegressor
+        from sklearn.datasets import make_regression
+        df_fea_random_forest=df_clean.drop(['Intervalo'],axis=1)
+
+
+        y = df_fea_filter['CSAT ']
+        X = df_fea_filter.drop('CSAT ', axis=1)
+        X_train, X_test, y_train, y_test = train_test_split(X, y)
+        scaler = StandardScaler().fit(X_train)
+        X_train = scaler.transform(X_train)
+        X_test = scaler.transform(X_test)
+        regr = RandomForestRegressor(max_depth=28, 
+                            random_state=0,
+                            min_samples_split=2,
+                            min_samples_leaf=1,
+                            max_features="sqrt",
+                            max_leaf_nodes=1000,
+                            ccp_alpha=0.0000000001,
+                            max_samples=2694)
+        regr.fit(X_train, y_train)
+
+        global_importances = pd.Series(regr.feature_importances_, index=X.columns)
+        global_importances.sort_values(ascending=True, inplace=True)
+        global_importances.plot.barh(color='green')
+        plt.xlabel("Importance")
+        plt.ylabel("Feature")
+        plt.title("Global Feature Importance - Built-in Method")
+             
+      </code>
+  </pre>
+</div>
+
+<img src="global_importance_random.png" width="600" height="300" style="position:center; margin-left:100px;">
+<h3>Importancia de Variables: Pemutacion de la importancia.</h3>
+<p>
+  En algunos casos, podemos observar que la variable aleatoria no es mas importante que las demás asi que este metodo sigue manteniendo las anteriores conclusiones.
+  La permutación de la importancia de las características es otra técnica para estimar la importancia de cada característica en un modelo de Random Forest midiendo el cambio en el rendimiento del modelo cuando los valores de las características se barajan aleatoriamente.
+
+  La permutación se realiza una vez entrenado el modelo, utilizando un conjunto de datos fuera de la muestra.
+  
+</p>
+
+<div class="container" style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 10px; margin-top: 20px;">
+  <pre style="background-color: #f0f0f0; padding: 5px; border-radius: 5px; overflow-x: auto;">
+      <code style="font-family: 'Courier New', Courier, monospace; font-size: 14px;">
+        
+        from sklearn.inspection import permutation_importance
+
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+        regr = RandomForestRegressor(max_depth=28, 
+                                    random_state=0,
+                                    min_samples_split=2,
+                                    min_samples_leaf=1,
+                                    max_features="sqrt",
+                                    max_leaf_nodes=1000,
+                                    ccp_alpha=0.0000000001)
+        regr.fit(X_train, y_train)
+
+        result = permutation_importance(regr, X_test, y_test, n_repeats=100, random_state=42)
+
+        perm_importances = result.importances_mean
+        perm_std = result.importances_std
+        sorted_idx = perm_importances.argsort()
+        feature_names = X.columns
+
+        pd.DataFrame({'Importance': perm_importances, 'Std': perm_std}, index=feature_names[sorted_idx]).sort_values('Importance',ascending=True)['Importance'].plot.barh(color='green')
+
+        
+             
+      </code>
+  </pre>
+</div>
+<img src="perm_importance.png'" width="600" height="300" style="position:center; margin-left:100px;margin-top: 20px;">
+
+
+
+<p style="margin-top: 30px;">
+  Aplicando el metodo de permutacion, AHT toma un papel mas relevante que en el resto de metodos, la conexión
+  sigue estándo en el segundo lugar y el resto tienen valores de importnacias similares 
+  
+  Ahora usemos el metodo shap:
+  
+</p>
+
+<div class="container" style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 10px; margin-top: 20px;">
+  <pre style="background-color: #f0f0f0; padding: 5px; border-radius: 5px; overflow-x: auto;">
+      <code style="font-family: 'Courier New', Courier, monospace; font-size: 14px;">
+        
+        import shap
+
+        explainer = shap.Explainer(regr)
+        shap_values = explainer(X_train)
+        
+        shap.plots.beeswarm(shap_values)
+        
+             
+      </code>
+  </pre>
+</div>
+<img src="shap.png" width="600" height="300" style="position:center; margin-left:100px;margin-top: 20px;">
+
+<p style="margin-top: 30px;">
+  <p>
+    Además de mostrar la importancia global del rasgo, también proporciona la dirección de la relación entre el rasgo y el objetivo.
+  </p>
+  <p>
+    Los puntos situados a la derecha de la línea central tienen un efecto positivo en las predicciones, mientras que los situados a la izquierda tienen un efecto negativo.
+  </p>
+  <p>
+    Los puntos rosas son casos en los que el valor de la característica es alto, los azules son casos en los que el valor de la característica es bajo.
+  </p>
+
+  <p>
+    Podemos observar que para valores grandes de inflow, el impacto de la variable inflow es negativo y tiene
+    sentido puesto que al haber mas flujo de interacciones, es mas complicado obtener un CSAT muy bueno,
+    esto se puede contrastar con el analisis exploratorio realizado anteriormente. Igualmente 
+    para FRT y RT tambien poseen una relación negativa la cual concuerda con el hecho de que a mayor
+    tiempo de respuesta y resolución, la satisfacción del usuario disminuye, es un comportamiento natural.  
+  </p>
+
+
+</p>
+
+<h3>Importancia de Variables: Random Forest-Rutas de las hojas.</h3>
+<p>
+  Otra forma de entender cómo contribuye cada característica a las predicciones de Random Forest es observar las rutas del árbol de decisión que sigue cada instancia.
+  Calcula la diferencia entre el valor de predicción en el nodo hoja y los valores de predicción en los nodos que lo preceden para obtener la contribución estimada de cada característica.
+  </p>  
+
+<div class="container" style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 10px; margin-top: 20px;">
+  <pre style="background-color: #f0f0f0; padding: 5px; border-radius: 5px; overflow-x: auto;">
+      <code style="font-family: 'Courier New', Courier, monospace; font-size: 14px;">
+        from treeinterpreter import treeinterpreter as ti
+
+        prediction, bias, contributions = ti.predict(regr, X_train)
+
+        
+             
+      </code>
+  </pre>
+</div>
+
+<img src="mean_impac_path.png" width="600" height="300" style="position:center; margin-left:100px; margin-top: 20px;">
+
+
+<p>
+  Vemos que todos los metodos que usamos en este caso nos dieron practicamente los mismos resultados, la gran mayoria de las variables aportan algo y el unico metodo que nos dió resultados que resalten fue el uso de la Permutation feature importance, aun asi logramos ver como las variables impactan y en que dirección a la variable respuesta
+
+  Para concluir esta parte tomaremos dos conjuntos de variables predictoras para probar distintos modelos y ver que resultados se obtienen:
+  
+</p>
+ 
+<li>
+  Dataset con todas las variables
+</li>
+<li>
+  Dataset con 7 variables determinadas por clustering de variables
+</li>
+<h2>Evaluación de modelos.</h2>
+<p>
+  El siguiente código en Python es para obtener los datasets expresados anteriormente.
+</p>
+<div class="container" style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 10px; margin-top: 20px;">
+  <pre style="background-color: #f0f0f0; padding: 5px; border-radius: 5px; overflow-x: auto;">
+      <code style="font-family: 'Courier New', Courier, monospace; font-size: 14px;">
+        from sklearn.preprocessing import StandardScaler
+        from sklearn.linear_model import LinearRegression,ridge_regression
+        from sklearn import tree
+        from sklearn.tree import DecisionTreeClassifier
+        from sklearn.tree import DecisionTreeRegressor
+        from sklearn.cluster import KMeans
+        from sklearn.model_selection import train_test_split
+        import tensorflow as tf
+        from sklearn.ensemble import GradientBoostingClassifier
+        from sklearn.ensemble import GradientBoostingRegressor
+        from sklearn.ensemble import RandomForestClassifier
+        from xgboost import XGBRegressor
+        from sklearn.metrics import classification_report
+        from sklearn.metrics import confusion_matrix
+        from sklearn.metrics import plot_confusion_matrix
+        from sklearn.metrics import r2_score
+        df_completo
+        df_variables_elegidas=df_completo[['Conectados'	,'Inflow',	'AHT (min)'	,'RT (min)','PD','CSAT ','% Reopen']]
+        df_variables_elegidas.corr()
+        df_model1=df_variables_elegidas
+        df_model2=df_completo
+        x1=df_model1.drop(['CSAT '],axis=1)
+
+        y1=df_model1['CSAT ']
+        x2=df_model2.drop(['CSAT ','Intervalo'],axis=1)
+
+        y2=df_model2['CSAT ']
+        feature_names1 = x1.columns
+        feature_names2 = x2.columns
+
+        X_train1, X_test1, y_train1, y_test1 = train_test_split(x1, y1,
+                                                            test_size = 0.2, #50% datos de entrenamiento, 50% prueba
+                                                            
+                                                            random_state = 25)
+
+        X_train2, X_test2, y_train2, y_test2 = train_test_split(x2, y2,
+                                                            test_size = 0.2, #50% datos de entrenamiento, 50% prueba
+                                                            
+                                                            random_state = 25)
+        
+             
+      </code>
+  </pre>
+</div>
+ 
+<p>
+  Ya totalmente distinguidos ambos conjuntos de datos, lo que haremos ahora es escalar los datos, lo cual es necesario en nuestro caso en el que nuestras varibles poseen diferentes escalas de tiempo o de unidad. Para esto definiremos dos escaladores con el fin de evitar incongruencias con los datos.
+</p>
+
+
+<div class="container" style="background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px; padding: 10px; margin-top: 20px;">
+  <pre style="background-color: #f0f0f0; padding: 5px; border-radius: 5px; overflow-x: auto;">
+      <code style="font-family: 'Courier New', Courier, monospace; font-size: 14px;">
+        sc1=StandardScaler()
+        X_train_sc1=sc1.fit_transform(X_train1)
+        X_test_sc1=sc1.transform(X_test1)
+
+        sc2=StandardScaler()
+        X_train_sc2=sc2.fit_transform(X_train2)
+        X_test_sc2=sc2.transform(X_test2)
+             
+      </code>
+  </pre>
+</div>
+<p>
+  Para este analisis compararemos los resultados de varios modelos usando como metrica el r^2. Estos fueron los resultados
+</p>
+
+<table class="table table hover">
+
+  <tr>
+
+    <th scope="row">Dataset</th>
+
+    <th>Linear Regression</th>
+
+    <th>Regression tree</th>
+
+    <th>Random forest</th>
+    <th>Xgboost regressor</th>
+    <th>Neural networks</th>
+    <th>KNN regressor</th>
+
+  </tr>
+
+  <tr>
+
+    <th>Variables seleccionadas</th>
+
+    <td>0.066276</td>
+    <td>0.715736</td>
+    <td>0.684933</td>
+    <td>0.656125</td>
+    <td>0.381829</td>
+    <td>0.695602</td>
+    
+
+    
+
+  </tr>
+
+  <tr>
+
+    <th>Todas las variables</th>
+
+    <td>0.089155</td>
+    <td>0.618192</td>
+    <td>0.727821</td>
+    <td>0.669805</td>
+    <td>0.425210</td>
+    <td>0.714284</td>
+
+  </tr>
+
+  
+
+</table>
+ 
+<p>
+  Las condiciones de prueba para estos modelos fueron las siguientes:
+  
+</p>
+<ul>
+    
+  <li>
+    Los hiperparametros de cada modelo no varian con dataset, esto con el fin de garantizar igualdad de condiciones.
+    
+  </li>
+  <li>
+    Los hiperparametros fueron elegidos basado en la experiencia y pruebas realizadas
+  </li>
+  <li>
+    No se usó grid search por lo que los resultados son mejorables. El objetivo de este ejercicio es ver que modelos a se adaptan mejor a los datos de primeras.
+  </li>
+  <li>
+    Todos los modelos fueron entrenados con los datos escalados.
+  </li>
+  <li>
+    Se determinó el r2 como la metrica que nos permitirá decidir el mejor modelo.
+  </li>
+</ul>
+<p style="margin-top: 30px;">
+  <h2>
+    Analizando los resultados
+  </h2>
+  <li>
+    Podemos notar que los modelos que obtuvieron mejores resultados en su gran mayoria fueron los entrenados con el conjunto de datos que posee todas las variables, lo cual concuerda fuertemente con los resultados encontrados al estudiar el impacto de las variables anteriormente.
+  </li> 
+  <li>
+    El modelo que obtuvo el mejor R cuadrado fue Random Forest, el cual es un modelo muy usado en la actualidad y que brinda buenos resultados.
+  </li> 
+  <li>
+    Modelos como el XGboost que son modelos ensemble mas robustos pudieran obtener mejores resultados pero estos requieren un analisis mas exhaustivo de hiperparametros lo que aumenta el costo computacional con respecto al modelo de random forest.
+  </li> 
+  <li>
+    El Random forest por el hecho de tener un mejor R2 y el arbol de regresion, el cual a pesar de tener un R cuadrado ligeramente menor a Random forest, este usa menos variables lo cual nos podría ayudar a Simplicidad del modelo, Reducción de sobreajuste (overfitting),mejor rendimiento computacional, menor riesgo de multicolinealidad y además, facilita la adquisición de datos.
+  </li>
+  <li>
+    Comparemos la distribución de los la variable respuesta de test original y las predicciones de cada modelo. En conclusión, tomaremos el modelo que nos da mejores resultados, puesto que a pesar de que la simplicidad siempre es importante tenerla de nuestro lado, nuestro estudio indicó que todas las variables son importantes, por lo que el modelo ganador es el Random Forest.
+  </li>
+</p>
+
+<div class="container my-3 " >
+
+  <div class="row">
+      <div class="col-3" style="margin-top:30px ;">
+          
+        <blockquote class="blockquote">
+          <p style="position: center;">All rights reserved &#169</p>
+        </blockquote>
+        <p>Luis Molina</p>
+          
+          
+      </div>
+      
+      <div class="col-7 offset-1" style=" text-align: center; margin-top: 20px;">
+        <figure>
+          <blockquote class="blockquote">
+            <p style="position: end;">True genius resides in the capacity for evaluation of uncertain, hazardous, and conflicting information.</p>
+          </blockquote>
+          <figcaption class="blockquote-footer">
+            Winston Churchill 
+          </figcaption>
+        </figure>
+          
+          
+      </div>
+      
+      
+      
+  </div>
+      
+  
+
+
+
+</div>
+</div>
+
+</body>
+</html>
